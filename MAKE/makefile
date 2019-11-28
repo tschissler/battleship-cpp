@@ -1,4 +1,5 @@
 TARGET = Battleship.exe
+CPPUNIT_PATH=/usr/local/lib
 
 $(TARGET): Battleship.o Program.a GameController.a 
 	g++ $^ -o $@
@@ -26,6 +27,15 @@ Letters.o: ../Battleship.GameController.Lib/Letters.cpp ../Battleship.GameContro
 
 GameController.o: ../Battleship.GameController.Lib/GameController.cpp ../Battleship.GameController.Lib/GameController.h
 	g++ -c -o $@ $<
+
+TestRunner.exe: CheckIsHitTests.o TestRunner.o GameController.o  Ship.o Position.o Letters.o
+	g++ $^ -o $@ -L${CPPUNIT_PATH}/lib -lstdc++ -lcppunit -ldl
+
+CheckIsHitTests.o: ../Battleship.GameController.Tests.CppUnit/CheckIsHitTests.cpp ../Battleship.GameController.Tests.CppUnit/CheckIsHitTests.h GameController.o  Ship.o Position.o Letters.o
+	g++ -c -o $@ $< -I${CPPUNIT_PATH}/include
+
+TestRunner.o: ../Battleship.GameController.Tests.CppUnit/TestRunner.cpp
+	g++ -c -o $@ $< -I${CPPUNIT_PATH}/include
 
 clean:
 	rm -f *.o *.a $(TARGET)
