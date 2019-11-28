@@ -6,8 +6,6 @@
 #include <time.h>
 #include <algorithm>
 
-#include "../Windows.Helpers/Console.h"
-#include "../Windows.Helpers/ConsoleColor.h"
 #include "../Battleship.GameController.Lib/GameController.h"
 
 #pragma comment(lib,"winmm.lib")  //for MSV C++   
