@@ -1,7 +1,4 @@
-#include "stdafx.h"
 #include "Console.h"
-
-#include <Windows.h>
 
 namespace Windows
 {
