@@ -55,6 +55,7 @@ cd cppunit-1.12.1
 ./configure
 make
 make install
+export LD_LIBRARY_PATH=/usr/local/lib
 ```
 
 After this you can build and run the Unit-Tests with these commands:
