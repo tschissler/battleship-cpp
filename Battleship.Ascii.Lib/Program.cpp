@@ -36,6 +36,7 @@ namespace Battleship
     
     void Program::Main()
     {
+        cout << "\033[35m";
       cout << R"(                                     |__                                       )" << endl;
       cout << R"(                                     | \ /                                     )" << endl;
       cout << R"(                                     ---                                       )" << endl;
@@ -50,6 +51,7 @@ namespace Battleship
       cout << R"(|                        Welcome to Battleship                         BB-61/  )" << endl;
       cout << R"( \_________________________________________________________________________|   )" << endl;
       cout << endl;
+      cout << "\033[0m";
 
 	  InitializeGame();
 
@@ -176,6 +178,7 @@ namespace Battleship
 			cout << "Please enter the positions for the " << ship.Name << " (size: " << ship.Size << ")" << endl;
 			for (int i = 1; i <= ship.Size; i++)
 			{
+                cout << "Enter position " << i << " of " << ship.Size << "\n";
 				string input;
 				getline(cin, input);
 				Position inputPosition = ParsePosition(input);
