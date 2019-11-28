@@ -22,7 +22,8 @@ YOu can use a Docker Container as a save environment providing all necessary too
 
 ```bash
 cd battleship-cpp
-docker run -it -v ${PWD}:/battleship gcc bash
+docker build . -t battleship
+docker run -it -v ${PWD}:/battleship battleship bash
 ```
 
 ### Build and run in the Docker container
@@ -47,18 +48,7 @@ if you are using Visual Studio, you can use the TestExplorer to run tests. You f
 You can als run Unit-Tests without Visual STudio, for example in the Docker Container. They are created using CppUnit (https://sourceforge.net/projects/cppunit/). These tests can be found in the folders
 - Battleship.GameController.Tests.CppUnit
 
-To execute the CppUnit Tests, you have to install CppUnit Library first.
-```bash
-cd /battleship
-tar -xf cppunit-1.12.1.tar
-cd cppunit-1.12.1
-./configure
-make
-make install
-export LD_LIBRARY_PATH=/usr/local/lib
-```
-
-After this you can build and run the Unit-Tests with these commands:
+You can run the Unit-Tests with these commands:
 
 ```bash
 cd /battleship/MAKE
