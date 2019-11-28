@@ -1,11 +1,8 @@
 #include "GameController.h"
-
 #include <stdlib.h>
 #include <time.h>
-
 #include <algorithm>
 #include <stdexcept>
-
 #include <iostream>
 
 namespace Battleship

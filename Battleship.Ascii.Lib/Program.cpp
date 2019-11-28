@@ -178,7 +178,7 @@ namespace Battleship
 			cout << "Please enter the positions for the " << ship.Name << " (size: " << ship.Size << ")" << endl;
 			for (int i = 1; i <= ship.Size; i++)
 			{
-                cout << "Enter position " << i << " of " << ship.Size << "\n";
+        cout << "Enter position " << i << " of " << ship.Size << "\n";
 				string input;
 				getline(cin, input);
 				Position inputPosition = ParsePosition(input);
