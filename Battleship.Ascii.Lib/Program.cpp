@@ -1,10 +1,5 @@
+#include "stdafx.h"
 #include "Program.h"
-
-#include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <algorithm>
 
 #include "../Battleship.GameController.Lib/GameController.h"
 
@@ -52,7 +47,7 @@ namespace Battleship
       cout << endl;
       cout << "\033[0m";
 
-	  InitializeGame();
+   InitializeGame();
 
       StartGame();
     }
@@ -137,15 +132,15 @@ namespace Battleship
       char cColumn = toupper(input.at(0));
       char cRow = input.at(1);
 
-	  int nColumn = (cColumn - 'A');
+   int nColumn = (cColumn - 'A');
       Letters lColumn = (Letters)nColumn;
 
       int nRow = cRow - '0';
 
-	  Position outPosition;
-	  outPosition.Column = lColumn;
-	  outPosition.Row = nRow;
-	  return outPosition;
+   Position outPosition;
+   outPosition.Column = lColumn;
+   outPosition.Row = nRow;
+   return outPosition;
     }
 
     Position Program::GetRandomPosition()

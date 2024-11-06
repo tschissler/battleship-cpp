@@ -1,5 +1,4 @@
-#include <algorithm>
-#include "CppUnitTest.h"
+#include "stdafx.h"
 
 #include "..\Battleship.GameController.Lib\GameController.h"
 

@@ -6,9 +6,11 @@
 #pragma once
 
 #include "targetver.h"
-#include <algorithm>
 
-// Headers for CppUnitTest
-#include "CppUnitTest.h"
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <algorithm>
 
 // TODO: reference additional headers your program requires here
