@@ -16,16 +16,21 @@
         },
         "group": {
           "kind": "build",
-          "isDefault": true
+          "isDefault": false
         }
       },
       {
         "type": "shell",
         "label": "Battleship",
         "command": "${workspaceFolder}/MAKE/Battleship.exe",
+        "dependsOn": "g++ build makefile",
         "problemMatcher": [
           "$gcc"
-        ]
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
       },
       {
         "type": "shell",
@@ -40,17 +45,21 @@
           "cwd": "/usr/bin"
         },
         "group": {
-          "kind": "build",
-          "isDefault": true
-        }
+          "kind": "test",
+          "isDefault": false
+        },
+        "problemMatcher": []
       },
       {
         "type": "shell",
-        "label": "Battleship",
-        "command": "${workspaceFolder}/MAKE/Battleship.exe",
-        "problemMatcher": [
-          "$gcc"
-        ]
+        "label": "Battleship Tests",
+        "command": "${workspaceFolder}/MAKE/TestRunner.exe",
+        "dependsOn": "g++ build TestRunner",
+        "problemMatcher": [],
+        "group": {
+          "kind": "test",
+          "isDefault": true
+        },
       }
     ]
 }

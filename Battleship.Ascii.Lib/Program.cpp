@@ -88,7 +88,7 @@ namespace Battleship
         bool isHit = GameController::GameController::CheckIsHit(enemyFleet, position);
         if (isHit)
         {
-            // Console::Beep();
+            cout << "\a";
 
 			cout << R"(                \         .  ./         )" << endl;
             cout << R"(              \      .:"";'.:..""   /   )" << endl;
@@ -111,7 +111,7 @@ namespace Battleship
 
         if (isHit)
         {
-            //Console::Beep();
+            cout << "\a";
 
 			cout << R"(                \         .  ./         )" << endl;
             cout << R"(              \      .:"";'.:..""   /   )" << endl;
@@ -122,11 +122,11 @@ namespace Battleship
             cout << R"(                 -\  \     /  /-        )" << endl;
             cout << R"(                   \  \   /  /          )" << endl;
 
-			cout << "(Computer shoot in " << position << " and " << "hit your ship !)" << endl;
+			cout << "Computer shoot in " << position << " and " << "hit your ship !" << endl;
         }
 		else
 		{
-			cout << "(Computer shoot in " << position << " and missed )   " << endl;
+			cout << "Computer shoot in " << position << " and missed   " << endl;
 		}
       }
       while (true);

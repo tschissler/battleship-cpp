@@ -23,7 +23,10 @@
                 }
             ],
             "preLaunchTask": "g++ build makefile",
-            "miDebuggerPath": "/usr/bin/gdb"
+            "miDebuggerPath": "/usr/bin/gdb",            
+            "sourceFileMap": {
+                "/battleship": "${workspaceFolder}"
+            }
         },
         {
             "name": "g++ build and run tests",
