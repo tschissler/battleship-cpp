@@ -23,9 +23,7 @@
                 }
             ],
             "preLaunchTask": "g++ build makefile",
-            "miDebuggerPath": "/usr/bin/gdb",            
-            "sourceFileMap": {
-                "/battleship": "${workspaceFolder}"
+            "miDebuggerPath": "/usr/bin/gdb"
             }
         },
         {
