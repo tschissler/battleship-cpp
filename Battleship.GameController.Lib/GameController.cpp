@@ -1,5 +1,3 @@
-#include "stdafx.h"
-
 #include "GameController.h"
 #include <stdlib.h>
 #include <time.h>

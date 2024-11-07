@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "Ship.h"
 #include <iostream>
 using namespace std;

@@ -6,9 +6,13 @@
 #include <cppunit/TestResultCollector.h>
 #include <cppunit/TestRunner.h>
 #include <cppunit/BriefTestProgressListener.h>
+#include <cppunit/ui/text/TestRunner.h>
 
 int main (int argc, char* argv[])
 {
+    // Create the test runner
+    CppUnit::TextUi::TestRunner runner;
+
     // Informiert Test-Listener ueber Testresultate
     CPPUNIT_NS :: TestResult testresult;
 

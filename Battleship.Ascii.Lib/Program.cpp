@@ -1,9 +1,6 @@
-#include "stdafx.h"
 #include "Program.h"
 
 #include "../Battleship.GameController.Lib/GameController.h"
-
-#pragma comment(lib,"winmm.lib")  //for MSV C++   
 
 using namespace Battleship::GameController;
 using namespace Battleship::GameController::Contracts;
