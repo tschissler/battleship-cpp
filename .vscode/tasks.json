@@ -54,10 +54,6 @@
         "type": "shell",
         "label": "Battleship Tests",
         "command": "${workspaceFolder}/MAKE/TestRunner.exe",
-        "args": [
-          "--output-format=xml",
-          "--output-file=${workspaceFolder}/MAKE/TestRunner.xml"
-        ],
         "dependsOn": "g++ build TestRunner",
         "problemMatcher": [],
         "group": {
